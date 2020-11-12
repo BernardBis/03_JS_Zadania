@@ -82,5 +82,92 @@ console.log(animals(1, 2, 3));
 console.log(animals(5, 2, 8));
 console.log("");
 
+// Zadanie 7
+
+function factorial(iNumber) {
+  if (iNumber < 1 ) { 
+    return 1; 
+  } else { 
+    return iNumber * factorial(iNumber-1);
+  }
+}
+
+console.log(factorial(3));
+console.log(factorial(5));
+console.log(factorial(13));
+console.log("");
+
+// Zadanie 8
+
+/*
+let person = {
+  "my name": "Marcin",
+  "my age": 28,
+  occupation: "inzynier"
+  };
+  person.place = "Katowice";
+  person["my name"] = "Maciej";
+*/
 
 
+function inkLevels(obInkLevels){
+    var nMinNumber;   
+    nMinNumber = obInkLevels.cyan;
+    if (nMinNumber > obInkLevels.magenta){
+      nMinNumber = obInkLevels.magenta;
+    }
+    if (nMinNumber > obInkLevels.yellow){
+      nMinNumber = obInkLevels.yellow;
+    }
+    console.log(nMinNumber);
+  }
+
+inkLevels({
+  "cyan": 23,
+  "magenta": 12,
+  "yellow": 10
+  });
+
+  inkLevels({
+  "cyan": 432,
+  "magenta": 543,
+  "yellow": 777
+  });
+
+  inkLevels({
+  "cyan": 700,
+  "magenta": 700,
+  "yellow": 0
+  });
+  
+  console.log("");
+
+// Zadanie 9
+
+
+function pHName(nNumber) {
+
+  switch (true) {
+    case (nNumber < 7 && nNumber > 0):
+    console.log("kwaśna");
+    break;
+    case (nNumber == 7):
+    console.log("obojętna");
+    break;
+    case (nNumber > 7 && nNumber <= 14):
+    console.log("zasadowa");
+    break;
+    default:
+    console.log("nieprawidłowy");
+    break;
+    }
+
+  return
+}
+
+ 
+pHName(5);
+pHName(8.7);
+pHName(7);
+pHName(99);
+console.log("");
